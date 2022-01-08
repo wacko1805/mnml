@@ -102,7 +102,7 @@ class BackgroundService : Service(), LifecycleOwner {
         startRecording()
       }
       DELETE_ACTION -> {
-        val recording: Recording = intent.getParcelableExtra(EXTRA_RECORDING)
+        val recording: Recording = intent.getParcelableExtra(EXTRA_RECORDING)!!
         log("Delete: $recording")
         recordingManager.deleteRecording(recording)
         notifications.cancelPostRecordNotification()

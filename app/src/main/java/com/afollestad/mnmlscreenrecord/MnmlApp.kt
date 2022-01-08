@@ -53,12 +53,14 @@ class MnmlApp : Application() {
       androidLogger()
       androidContext(this@MnmlApp)
       modules(
+          listOf(
           commonModule,
           notificationsModule,
           prefModule,
           engineModule,
           mainModule,
           viewModelModule
+          )
       )
     }
 
